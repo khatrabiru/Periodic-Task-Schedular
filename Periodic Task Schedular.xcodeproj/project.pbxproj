@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C030BD8274EFC7400D3F45C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C030BD7274EFC7400D3F45C /* main.cpp */; };
+		9C030BE2274EFC8700D3F45C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C030BE0274EFC8700D3F45C /* libsqlite3.tbd */; };
+		9C030BE3274EFC8700D3F45C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C030BE1274EFC8700D3F45C /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		9C030BD4274EFC7400D3F45C /* Periodic Task Schedular */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Periodic Task Schedular"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C030BD7274EFC7400D3F45C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9C030BE0274EFC8700D3F45C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9C030BE1274EFC8700D3F45C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C030BE2274EFC8700D3F45C /* libsqlite3.tbd in Frameworks */,
+				9C030BE3274EFC8700D3F45C /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				9C030BD6274EFC7400D3F45C /* Periodic Task Schedular */,
 				9C030BD5274EFC7400D3F45C /* Products */,
+				9C030BDF274EFC8700D3F45C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				9C030BD7274EFC7400D3F45C /* main.cpp */,
 			);
 			path = "Periodic Task Schedular";
+			sourceTree = "<group>";
+		};
+		9C030BDF274EFC8700D3F45C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C030BE1274EFC8700D3F45C /* libsqlite3.0.tbd */,
+				9C030BE0274EFC8700D3F45C /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
