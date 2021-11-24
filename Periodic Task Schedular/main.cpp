@@ -10,7 +10,9 @@
 #include <unistd.h>
 #include "Databases/Common.hpp"
 #include "Databases/DNS.hpp"
+#include "Databases/TCP.hpp"
 #include "Modules/Dns.hpp"
+#include "Modules/Tcp.hpp"
 
 void printMonitoringData() {
     printf("\n\n***********************************************************************************************\n");
@@ -19,6 +21,13 @@ void printMonitoringData() {
     float Max = getValue("DNS", "DnsResolveTime", "MAX");
     float Average = getValue("DNS", "DnsResolveTime", "AVG");
     printf("DnsResolveTime %20f %20f %20f\n", Min, Max, Average);
+    printf("\n\n***********************************************************************************************\n");
+    
+    std::cout << "Table               Min(microseconds)       Max(microseconds)    Agerage(microseconds)\n";
+    Min = getValue("TCP", "TcpConnectionTime", "MIN");
+    Max = getValue("TCP", "TcpConnectionTime", "MAX");
+    Average = getValue("TCP", "TcpConnectionTime", "AVG");
+    printf("TcpConnectionTime %20f %20f %20f\n", Min, Max, Average);
     printf("\n\n***********************************************************************************************\n");
     
 }
@@ -35,9 +44,11 @@ int main() {
     
     while( true ) {
         if( cur%networkProbeTaskFrequency == 0 ) {
-            long long dnsResolveTimeInMilliSeconds = getDnsResolveTime("lightoj.com");
+            long long dnsResolveTimeInMilliSeconds = getDnsResolveTime("google.com");
+            long long tcpConnectionTimeMilliSeconds = getTcpConnectionTime("google.com", 80);
             // Update Database
             insertIntoDnsTable(std::to_string(dnsResolveTimeInMilliSeconds));
+            insertIntoTcpTable(std::to_string(tcpConnectionTimeMilliSeconds));
         }
         
         usleep(1000000); // sleep for 1 second

@@ -13,6 +13,8 @@
 		9C030BE9274F004D00D3F45C /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C030BE7274F004D00D3F45C /* Common.cpp */; };
 		9C030BF2274F006500D3F45C /* Dns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C030BF0274F006500D3F45C /* Dns.cpp */; };
 		9C717C50274F05D0006EB5CF /* DNS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C717C4E274F05D0006EB5CF /* DNS.cpp */; };
+		9C717C54274F0731006EB5CF /* TCP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C717C52274F0731006EB5CF /* TCP.cpp */; };
+		9C717C58274F073A006EB5CF /* Tcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C717C56274F073A006EB5CF /* Tcp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,10 @@
 		9C030BF1274F006500D3F45C /* Dns.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Dns.hpp; sourceTree = "<group>"; };
 		9C717C4E274F05D0006EB5CF /* DNS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DNS.cpp; sourceTree = "<group>"; };
 		9C717C4F274F05D0006EB5CF /* DNS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DNS.hpp; sourceTree = "<group>"; };
+		9C717C52274F0731006EB5CF /* TCP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TCP.cpp; sourceTree = "<group>"; };
+		9C717C53274F0731006EB5CF /* TCP.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TCP.hpp; sourceTree = "<group>"; };
+		9C717C56274F073A006EB5CF /* Tcp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tcp.cpp; sourceTree = "<group>"; };
+		9C717C57274F073A006EB5CF /* Tcp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tcp.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 			children = (
 				9C030BF0274F006500D3F45C /* Dns.cpp */,
 				9C030BF1274F006500D3F45C /* Dns.hpp */,
+				9C717C56274F073A006EB5CF /* Tcp.cpp */,
+				9C717C57274F073A006EB5CF /* Tcp.hpp */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -105,6 +113,8 @@
 				9C030BE8274F004D00D3F45C /* Common.hpp */,
 				9C717C4E274F05D0006EB5CF /* DNS.cpp */,
 				9C717C4F274F05D0006EB5CF /* DNS.hpp */,
+				9C717C52274F0731006EB5CF /* TCP.cpp */,
+				9C717C53274F0731006EB5CF /* TCP.hpp */,
 			);
 			path = Databases;
 			sourceTree = "<group>";
@@ -165,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C717C54274F0731006EB5CF /* TCP.cpp in Sources */,
 				9C030BF2274F006500D3F45C /* Dns.cpp in Sources */,
 				9C717C50274F05D0006EB5CF /* DNS.cpp in Sources */,
+				9C717C58274F073A006EB5CF /* Tcp.cpp in Sources */,
 				9C030BE9274F004D00D3F45C /* Common.cpp in Sources */,
 				9C030BD8274EFC7400D3F45C /* main.cpp in Sources */,
 			);
