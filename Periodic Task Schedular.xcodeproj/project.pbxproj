@@ -10,6 +10,9 @@
 		9C030BD8274EFC7400D3F45C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C030BD7274EFC7400D3F45C /* main.cpp */; };
 		9C030BE2274EFC8700D3F45C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C030BE0274EFC8700D3F45C /* libsqlite3.tbd */; };
 		9C030BE3274EFC8700D3F45C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C030BE1274EFC8700D3F45C /* libsqlite3.0.tbd */; };
+		9C030BE9274F004D00D3F45C /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C030BE7274F004D00D3F45C /* Common.cpp */; };
+		9C030BF2274F006500D3F45C /* Dns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C030BF0274F006500D3F45C /* Dns.cpp */; };
+		9C717C50274F05D0006EB5CF /* DNS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C717C4E274F05D0006EB5CF /* DNS.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +32,12 @@
 		9C030BD7274EFC7400D3F45C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9C030BE0274EFC8700D3F45C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9C030BE1274EFC8700D3F45C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		9C030BE7274F004D00D3F45C /* Common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
+		9C030BE8274F004D00D3F45C /* Common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Common.hpp; sourceTree = "<group>"; };
+		9C030BF0274F006500D3F45C /* Dns.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dns.cpp; sourceTree = "<group>"; };
+		9C030BF1274F006500D3F45C /* Dns.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Dns.hpp; sourceTree = "<group>"; };
+		9C717C4E274F05D0006EB5CF /* DNS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DNS.cpp; sourceTree = "<group>"; };
+		9C717C4F274F05D0006EB5CF /* DNS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DNS.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +73,8 @@
 		9C030BD6274EFC7400D3F45C /* Periodic Task Schedular */ = {
 			isa = PBXGroup;
 			children = (
+				9C030BE6274F003700D3F45C /* Databases */,
+				9C030BE5274F002B00D3F45C /* Modules */,
 				9C030BD7274EFC7400D3F45C /* main.cpp */,
 			);
 			path = "Periodic Task Schedular";
@@ -76,6 +87,26 @@
 				9C030BE0274EFC8700D3F45C /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C030BE5274F002B00D3F45C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9C030BF0274F006500D3F45C /* Dns.cpp */,
+				9C030BF1274F006500D3F45C /* Dns.hpp */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9C030BE6274F003700D3F45C /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				9C030BE7274F004D00D3F45C /* Common.cpp */,
+				9C030BE8274F004D00D3F45C /* Common.hpp */,
+				9C717C4E274F05D0006EB5CF /* DNS.cpp */,
+				9C717C4F274F05D0006EB5CF /* DNS.hpp */,
+			);
+			path = Databases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C030BF2274F006500D3F45C /* Dns.cpp in Sources */,
+				9C717C50274F05D0006EB5CF /* DNS.cpp in Sources */,
+				9C030BE9274F004D00D3F45C /* Common.cpp in Sources */,
 				9C030BD8274EFC7400D3F45C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
