@@ -69,6 +69,7 @@ void insertIntoTcpTable(std::string tcpConnectioTime){
       fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
       return;
    }
+    
     // finding the number of rows in table.
     id = getNumberOfRows("TCP");
     if(id == -1) {

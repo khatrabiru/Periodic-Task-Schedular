@@ -8,11 +8,15 @@
 #include <stdio.h>
 #include <iostream>
 #include <unistd.h>
+
 #include "Databases/Common.hpp"
 #include "Databases/DNS.hpp"
 #include "Databases/TCP.hpp"
+#include "Databases/MEMORY.hpp"
+
 #include "Modules/Dns.hpp"
 #include "Modules/Tcp.hpp"
+#include "Modules/Memory.hpp"
 
 void printMonitoringData() {
     printf("\n\n***********************************************************************************************\n");
@@ -28,6 +32,13 @@ void printMonitoringData() {
     Max = getValue("TCP", "TcpConnectionTime", "MAX");
     Average = getValue("TCP", "TcpConnectionTime", "AVG");
     printf("TcpConnectionTime %20f %20f %20f\n", Min, Max, Average);
+    printf("\n\n***********************************************************************************************\n");
+    
+    std::cout << "Table               Min(bytes)              Max(bytes)           Agerage(bytes)\n";
+    Min = getValue("MEMORY", "MemoryUsage", "MIN");
+    Max = getValue("MEMORY", "MemoryUsage", "MAX");
+    Average = getValue("MEMORY", "MemoryUsage", "AVG");
+    printf("MemoryUsage  %20f %20f %20f\n", Min, Max, Average);
     printf("\n\n***********************************************************************************************\n");
     
 }
@@ -51,9 +62,18 @@ int main() {
             insertIntoTcpTable(std::to_string(tcpConnectionTimeMilliSeconds));
         }
         
+        if(cur % systemProbeTaskFrequency == 0) {
+            long memoryUsage = getMemoryUsage();
+            insertIntoMemoryTable(std::to_string(memoryUsage));
+        }
+        
         usleep(1000000); // sleep for 1 second
-        // Print metrics
-        printMonitoringData();
+        
+        if(cur %networkProbeTaskFrequency == 0 && cur % systemProbeTaskFrequency == 0) {
+            // Print metrics
+            printMonitoringData();
+        }
+        
         cur = cur + 1;
         break;
     }

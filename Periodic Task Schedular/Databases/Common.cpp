@@ -8,6 +8,7 @@
 #include "Common.hpp"
 #include "DNS.hpp"
 #include "TCP.hpp"
+#include "MEMORY.hpp"
 #include <stdio.h>
 #include <string>
 #include <stdlib.h>
@@ -86,4 +87,5 @@ float getValue(std::string table, std::string column, std::string command) {
 void initialize() {
     createDnsTable();
     createTcpTable();
+    createMemoryTable();
 }
