@@ -29,7 +29,7 @@ void createMemoryTable() {
    char *sql;
 
    /* Open database */
-   rc = sqlite3_open("test8.db", &db);
+   rc = sqlite3_open("PTS.db", &db);
    
    if( rc ) {
       fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
@@ -60,7 +60,7 @@ void insertIntoMemoryTable(std::string memoryUsage){
     std::string sql;
 
    /* Open database */
-   rc = sqlite3_open("test8.db", &db);
+   rc = sqlite3_open("PTS.db", &db);
 
    if( rc ) {
       fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));

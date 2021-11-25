@@ -44,9 +44,9 @@ void printMonitoringData() {
 }
 
 int main() {
-    
-    int networkProbeTaskFrequency = 3; // runs in every 5 seconds
-    int systemProbeTaskFrequency = 6; // runs in every 5 seconds
+    // we can customize the execution frequency for each task separately.
+    int networkProbeTaskFrequency = 3; // runs in every 3 seconds
+    int systemProbeTaskFrequency = 6; // runs in every 6 seconds
     
     int cur = 0;
     
@@ -75,7 +75,6 @@ int main() {
         }
         
         cur = cur + 1;
-        break;
     }
     
     return 0;

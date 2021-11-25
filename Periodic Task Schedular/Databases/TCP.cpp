@@ -30,7 +30,7 @@ void createTcpTable() {
    char *sql;
 
    /* Open database */
-   rc = sqlite3_open("test8.db", &db);
+   rc = sqlite3_open("PTS.db", &db);
    
    if( rc ) {
       fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
@@ -63,7 +63,7 @@ void insertIntoTcpTable(std::string tcpConnectioTime){
    std::string sql;
 
    /* Open database */
-   rc = sqlite3_open("test8.db", &db);
+   rc = sqlite3_open("PTS.db", &db);
 
    if( rc ) {
       fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
